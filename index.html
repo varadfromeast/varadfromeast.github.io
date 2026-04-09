@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+     2 <html lang="en">
+     3 <head>
+     4     <meta charset="UTF-8">
+     5     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     6     <title>Your Name | Researcher & Developer</title>
+     7     <style>
+     8         :root {
+     9             --bg: #0a0a0a;
+    10             --text: #e0e0e0;
+    11             --dim: #888;
+    12             --hr: #333;
+    13         }
+    14         body.light-mode {
+    15             --bg: #ffffff;
+    16             --text: #000000;
+    17             --dim: #666;
+    18             --hr: #eee;
+    19         }
+    20         body {
+    21             background-color: var(--bg);
+    22             color: var(--text);
+    23             font-family: "Courier New", Courier, monospace;
+    24             max-width: 700px;
+    25             margin: 60px auto;
+    26             padding: 0 25px;
+    27             line-height: 1.6;
+    28             transition: background 0.2s, color 0.2s;
+    29         }
+    30         header { margin-bottom: 40px; }
+    31         h1, h2, h3 { font-weight: normal; text-transform: lowercase; margin: 0; }
+    32         h1 { font-size: 1.5rem; letter-spacing: -1px; }
+    33         h2 { font-size: 1.1rem; color: var(--text); margin-top: 40px; margin-bottom: 20px; border-bottom: 1px solid var(--hr); display: inline-block; }
+    34         .tagline { color: var(--dim); margin-bottom: 10px; }
+    35         .skills { font-size: 0.9rem; color: var(--dim); }
+    36         hr { border: 0; border-top: 1px solid var(--hr); margin: 30px 0; }
+    37         .item { margin-bottom: 25px; }
+    38         .item-title { display: flex; justify-content: space-between; align-items: baseline; }
+    39         .item-title h3 { font-size: 1rem; }
+    40         .item-desc { color: var(--dim); font-size: 0.95rem; margin-top: 5px; }
+    41         a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+    42         a:hover { color: var(--dim); }
+    43         button#theme-toggle {
+    44             background: none; border: none; color: var(--dim); 
+    45             cursor: pointer; font-family: inherit; font-size: 0.8rem;
+    46             position: fixed; top: 20px; right: 20px;
+    47         }
+    48     </style>
+    49 </head>
+    50 <body>
+    51     <button id="theme-toggle">light</button>
+    52
+    53     <header>
+    54         <h1>YOUR NAME</h1>
+    55         <p class="tagline">Location · Role or Student at University</p>
+    56         <p class="skills">ml · nlp · computer vision · agents</p>
+    57         <p>I build things and occasionally write about them.</p>
+    58     </header>
+    59
+    60     <hr>
+    61
+    62     <section id="projects">
+    63         <h2>projects</h2>
+    64         <div class="item">
+    65             <div class="item-title">
+    66                 <h3><a href="#">Project One</a></h3>
+    67                 <span>2024</span>
+    68             </div>
+    69             <p class="item-desc">A brief description of the functional platform you built.</p>
+    70         </div>
+    71     </section>
+    72
+    73     <section id="implementations">
+    74         <h2>paper implementations</h2>
+    75         <div class="item">
+    76             <div class="item-title">
+    77                 <h3><a href="#">Attention Is All You Need</a></h3>
+    78                 <span>PyTorch</span>
+    79             </div>
+    80             <p class="item-desc">From-scratch implementation of the Transformer architecture.</p>
+    81         </div>
+    82     </section>
+    83
+    84     <section id="writing">
+    85         <h2>writing</h2>
+    86         <div class="item">
+    87             <p><a href="#">How to build a personal AI platform</a> (2024)</p>
+    88         </div>
+    89     </section>
+    90
+    91     <footer>
+    92         <hr>
+    93         <p class="skills"><a href="https://github.com/yourusername">github</a> · <a href="mailto:you@email.com">email</a> · <a href="#">twitter</a></p>
+    94     </footer>
+    95
+            <script>
+            const btn = document.getElementById('theme-toggle');
+
+            btn?.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+                btn.textContent = document.body.classList.contains('light-mode')
+                    ? 'Switch to Dark'
+                    : 'Switch to Light';
+            });
+            </script>
+   103 </body>
+   104 </html>
